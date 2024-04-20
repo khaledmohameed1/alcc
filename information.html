@@ -81,10 +81,13 @@
                         <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
                           Address
                         </th>
+                        <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
+                          Details
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr class="bg-gray-100 border-b">
+                      <tr class="bg-gray-100 border-b" id="informationDetails">
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-gray-900">1</td>
                         <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
                           khaeld mohamed
@@ -103,6 +106,11 @@
                         </td>
                         <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
                           7 Tolba El-Feki St
+                        </td>
+                        <td>
+                          <button onclick="deleteData() "
+                            class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full delete-btn"><a
+                              href="#">Delete</a></button>
                         </td>
                       </tr>
                       <tr class="bg-gray-100 border-b">
@@ -201,6 +209,10 @@
     </div>
 
     <script>
+      let informationDetails = document.getElementById("informationDetails")
+      function deleteData() {
+        informationDetails.remove()
+      }
       const sidebar = document.getElementById('sidebar');
       const openSidebarButton = document.getElementById('open-sidebar');
 

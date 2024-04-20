@@ -35,6 +35,10 @@
         <div class="bg-white shadow">
           <div class="container mx-auto">
             <div class="flex justify-between items-center py-4 px-2">
+              <!-- Add Button -->
+              <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 edit-btn rounded-full"
+                id="open-modal">Add</button>
+
               <h1 class="text-xl font-semibold">Control Board</h1>
 
               <button class="text-gray-500 hover:text-gray-600" id="open-sidebar">
@@ -49,6 +53,101 @@
         </div>
         <!-- Content Body -->
         <div class="flex-1 overflow-auto p-4">
+
+
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span id="x">X</span>
+
+
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                image
+              </label>
+              <input type="file" accept="image/jpeg, image/png , image/jpg" id="input-file"
+                class="imge appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                Name Course
+              </label>
+              <input
+                class="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="nameCoures" type="text" placeholder="title">
+
+
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                price
+              </label>
+              <input
+                class="appearance-none border border-gray-400 rounded w-full py-2 mb-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="price" type="number" placeholder="body">
+
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                Description
+              </label>
+              <input
+                class="appearance-none border border-gray-400 rounded w-full py-2 mb-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="description" type="text" placeholder="Country">
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                title name
+              </label>
+              <input
+                class="appearance-none border border-gray-400 rounded w-full py-2 mb-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="titleName" type="text" placeholder="body">
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                description Coures
+              </label>
+              <input
+                class="appearance-none border border-gray-400 rounded w-full py-2 mb-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="description-coures" type="text" placeholder="body">
+
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                line one
+
+              </label>
+              <input
+                class="appearance-none  border border-gray-400 rounded w-full py-2 mb-5 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="lineOne" type="text" placeholder="body">
+
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                line Two
+
+              </label>
+              <input
+                class="appearance-none  border border-gray-400 rounded w-full py-2 mb-5 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="linetwo" type="text" placeholder="body">
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                line Three
+
+              </label>
+              <input
+                class="appearance-none  border border-gray-400 rounded w-full py-2 mb-5 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="linethree" type="text" placeholder="body">
+
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                line four
+
+              </label>
+              <input
+                class="appearance-none  border border-gray-400 rounded w-full py-2 mb-5 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="lineFour" type="text" placeholder="body">
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                line Five
+
+              </label>
+              <input
+                class="appearance-none  border border-gray-400 rounded w-full py-2 mb-5 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="linefive" type="text" placeholder="body">
+
+              <div class="flex  justify-between">
+                <button id="doneBtn"
+                  class="  bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 edit-btn rounded-full">Done</button>
+                <button id="closeBtn"
+                  class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full delete-btn">Close</button>
+              </div>
+            </div>
+          </div>
+
+
           <h1 class="text-2xl mb-3 font-bold">Information for course participants</h1>
           <div class="flex flex-col">
             <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
@@ -56,138 +155,128 @@
                 <div class="overflow-hidden">
                   <table class="min-w-full">
                     <thead class="bg-white border-b">
+
                       <tr>
                         <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-right">
                           number
                         </th>
-                        <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
-                          Full Name
+                        <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-right">
+                          Image
                         </th>
                         <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
-                          Phone Number
+                          Name Course
                         </th>
                         <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
-                          Email Address
+                          Price
                         </th>
                         <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
-                          Country
+                          Description
+                        </th>
+                        <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
+                          Title Name
+                        </th>
+                        <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
+                          Description Coures
+                        </th>
+                        <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
+                          Line One
                         </th>
 
                         <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
-                          Enter city
+                          Line Two
                         </th>
 
                         <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
-                          Address
+                          Line Three
+                        </th>
+
+                        <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
+                          Line four
+                        </th>
+
+                        <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
+                          Line Five
+                        </th>
+                        <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ w-[300px]">
+                          Details
                         </th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="couresList">
+                      <!-- id="couresList" -->
                       <tr class="bg-gray-100 border-b">
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-gray-900">1</td>
                         <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaeld mohamed
+                          <img src="image/khaled.jpg" class="w-11 h-11 rounded-[50%]" alt="">
                         </td>
                         <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          01026540533
+                          engidfsfsd
                         </td>
                         <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaeld@gmail.com
+                          300
+                        </td>
+                        <td
+                          class="w-52 overflow-hidden text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
+                          <p class="w-52"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia aut
+                            temporibus
+                            repudiandae
+                            itaque facere, harum, maiores unde culpa repellendus dicta enim, esse provident exp</p>
+                        </td>
+                        <td
+                          class="w-52 overflow-hidden text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
+                          <p class="w-52">Egypt Egypt Egypt Egypt Egypt EgyptEgypt</p>
                         </td>
                         <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          Egypt
+                          <p>Egypt Egypt Egypt Egypt Egypt EgyptEgypt sadadasdsa
+                        </td>
+                        <td
+                          class="w-52 overflow-hidden text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
+                          <p class="w-52"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia aut
+                            temporibus
+                            repudiandae
+                            itaque facere, harum, maiores unde culpa repellendus dicta enim, esse provident exp
+                          </p>
+                        </td>
+                        <td
+                          class="w-52 overflow-hidden text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
+                          <p class="w-52"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia aut
+                            temporibus
+                            repudiandae
+                            itaque facere, harum, maiores unde culpa repellendus dicta enim, esse provident exp
+                          </p>
+                        </td>
+                        <td
+                          class="w-52 overflow-hidden text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
+                          <p class="w-52"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia aut
+                            temporibus
+                            repudiandae
+                            itaque facere, harum, maiores unde culpa repellendus dicta enim, esse provident exp
+                          </p>
+                        </td>
+                        <td
+                          class="w-52 overflow-hidden text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
+                          <p class="w-52">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia aut
+                            temporibus
+                            repudiandae
+                            itaque facere, harum, maiores unde culpa repellendus dicta enim, esse provident exp</p>
+                        </td>
+                        <td
+                          class="w-52 overflow-hidden text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
+                          <p class="w-52"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia aut
+                            temporibus
+                            repudiandae
+                            itaque facere, harum, maiores unde culpa repellendus dicta enim, esse provident exp</p>
                         </td>
                         <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          Egypt
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          7 Tolba El-Feki St
+                          <button
+                            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 edit-btn rounded-full"><a
+                              href="#">Edit</a></button>
+                          <button
+                            class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full delete-btn"><a
+                              href="#">Delete</a></button>
                         </td>
                       </tr>
-                      <tr class="bg-gray-100 border-b">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-gray-900">1</td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaeld mohamed
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          01026540533
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaeld@gmail.com
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          Egypt
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          Egypt
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          7 Tolba El-Feki St
-                        </td>
-                      </tr>
-                      <tr class="bg-gray-100 border-b">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-center font-medium text-gray-900">1</td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaeld mohamed
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          01026540533
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaeld@gmail.com
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          Egypt
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          Egypt
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          7 Tolba El-Feki St
-                        </td>
-                      </tr>
-                      <tr class="bg-gray-100 border-b">
-                        <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium text-gray-900">1</td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaeld mohamed
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          01026540533
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaeld@gmail.com
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          Egypt
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          Egypt
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          7 Tolba El-Feki St
-                        </td>
-                      </tr>
-                      <tr class="bg-gray-100 border-b">
-                        <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium text-gray-900">1</td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaeld mohamed
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          01026540533
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaeld@gmail.com
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          Egypt
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          Egypt
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          7 Tolba El-Feki St
-                        </td>
-                      </tr>
+
                     </tbody>
                   </table>
                 </div>
@@ -197,7 +286,9 @@
         </div>
 
       </div>
+
     </div>
+
 
     <script>
       const sidebar = document.getElementById('sidebar');
@@ -215,6 +306,7 @@
         }
       });
     </script>
+    <script src="js.js"></script>
 
   </div>
   </script>

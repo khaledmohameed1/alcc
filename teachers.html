@@ -9,6 +9,7 @@
 </head>
 
 
+
 <body class="bg-gray-200">
   <div class="bg-gray-100">
 
@@ -35,6 +36,10 @@
         <div class="bg-white shadow">
           <div class="container mx-auto">
             <div class="flex justify-between items-center py-4 px-2">
+              <!-- Add Button -->
+              <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 edit-btn rounded-full"
+                id="open-modal">Add</button>
+
               <h1 class="text-xl font-semibold">Control Board</h1>
 
               <button class="text-gray-500 hover:text-gray-600" id="open-sidebar">
@@ -50,6 +55,49 @@
         <!-- Content Body -->
         <div class="flex-1 overflow-auto p-4">
           <h1 class="text-2xl mb-3 font-bold">Teachers</h1>
+          <!-- Pop-up Modal -->
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span id="x">X</span>
+
+
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                image
+              </label>
+              <input type="file" accept="image/jpeg, image/png , image/jpg" id="input-file"
+                class="mohame appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+
+
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                Name
+              </label>
+              <input
+                class="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="name" type="text" placeholder="Name">
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                Title Job
+              </label>
+              <input
+                class="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="name" type="text" placeholder="title">
+
+
+              <label class="block text-gray-700 font-bold mb-2" for="card-number">
+                Body
+              </label>
+              <input
+                class="appearance-none border border-gray-400 rounded w-full py-2 mb-10 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="name" type="text" placeholder="body">
+
+              <div class="flex m-[20px] justify-between">
+                <button id="doneBtn"
+                  class="m-[20px]  bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 edit-btn rounded-full">Done</button>
+                <button id="closeBtn"
+                  class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full delete-btn">Close</button>
+              </div>
+            </div>
+          </div>
+
           <div class="flex flex-col">
             <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
               <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
@@ -57,9 +105,7 @@
                   <table class="min-w-full">
                     <thead class="bg-white border-b">
                       <tr>
-                        <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-right">
-                          number
-                        </th>
+
                         <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
                           Image
                         </th>
@@ -73,155 +119,11 @@
                           Body
                         </th>
 
-                        <th scope="col" class="text-base font-semibold text-gray-900 px-6 py-4 text-righ">
-                          Details
-                        </th>
+
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr class="bg-gray-100 border-b">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-gray-900">1</td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <img src="image/khaled.jpg" alt="Image" class="w-12 h-12 m-auto rounded-[50%]">
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaled mohamed
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          front end developer
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <p class="w-[100px] overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Minima, obcaecati, nihil id iusto
-                            error</p>
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full"><a
-                              href="#">Edit</a></button>
-                          <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"><a
-                              href="#"></a>Delete</button>
-                        </td>
-
-                      </tr>
-                      <tr class="bg-gray-100 border-b">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-gray-900">1</td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <img src="image/khaled.jpg" alt="Image" class="w-12 h-12 m-auto rounded-[50%]">
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaled mohamed
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          front end developer
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <p class="w-40 overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Minima, obcaecati, nihil id iusto
-                            error</p>
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full"><a
-                              href="#">Edit</a></button>
-                          <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"><a
-                              href="#"></a>Delete</button>
-                        </td>
-
-                      </tr>
-                      <tr class="bg-gray-100 border-b">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-gray-900">1</td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <img src="image/khaled.jpg" alt="Image" class="w-12 h-12 m-auto rounded-[50%]">
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaled mohamed
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          front end developer
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <p class="w-40 overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Minima, obcaecati, nihil id iusto
-                            error</p>
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full"><a
-                              href="#">Edit</a></button>
-                          <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"><a
-                              href="#"></a>Delete</button>
-                        </td>
-
-                      </tr>
-                      <tr class="bg-gray-100 border-b">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-gray-900">1</td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <img src="image/khaled.jpg" alt="Image" class="w-12 h-12 m-auto rounded-[50%]">
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaled mohamed
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          front end developer
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <p class="w-40 overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Minima, obcaecati, nihil id iusto
-                            error</p>
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full"><a
-                              href="#">Edit</a></button>
-                          <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"><a
-                              href="#"></a>Delete</button>
-                        </td>
-
-                      </tr>
-                      <tr class="bg-gray-100 border-b">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-gray-900">1</td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <img src="image/khaled.jpg" alt="Image" class="w-12 h-12 m-auto rounded-[50%]">
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaled mohamed
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          front end developer
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <p class="w-40 overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Minima, obcaecati, nihil id iusto
-                            error</p>
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full"><a
-                              href="#">Edit</a></button>
-                          <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"><a
-                              href="#"></a>Delete</button>
-                        </td>
-
-                      </tr>
-                      <tr class="bg-gray-100 border-b">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-gray-900">1</td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <img src="image/khaled.jpg" alt="Image" class="w-12 h-12 m-auto rounded-[50%]">
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          khaled mohamed
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          front end developer
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <p class="w-40 overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Minima, obcaecati, nihil id iusto
-                            error</p>
-                        </td>
-                        <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
-                          <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full"><a
-                              href="#">Edit</a></button>
-                          <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"><a
-                              href="#"></a>Delete</button>
-                        </td>
-                      </tr>
+                    <tbody id="teacherList">
+                      <!-- Existing rows will be appended here -->
                     </tbody>
                   </table>
                 </div>
@@ -231,29 +133,93 @@
         </div>
 
       </div>
+
+
     </div>
 
+
+
+
     <script>
+      let i = document.querySelector(".mohame")
+      let img = document.querySelector(".khaled")
+      // img.src = "image/khaled.jpg";
+      function myFunction() {
+        img.src = `${URL.createObjectURL(i.files[ 0 ])}`;
+      }
+
+      // Function to handle delete button click
+      function handleDeleteButtonClick(event) {
+        const row = event.target.closest('tr');
+        row.remove();
+      }
+
+      function addDeleteButtonListener(row) {
+        const deleteButton = row.querySelector('.delete-btn');
+        deleteButton.addEventListener('click', handleDeleteButtonClick);
+      }
+
+      function addRow(imageSrc, name, title, body) {
+        const tableBody = document.getElementById('teacherList');
+        const newRow = document.createElement('tr');
+        newRow.className = 'bg-gray-100 border-b';
+        imageSrc = URL.createObjectURL(i.files[ 0 ])
+        newRow.innerHTML = `
+          <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap"><img src="${imageSrc}" alt="Image" class=" w-12 h-12 m-auto rounded-[50%]"></td>
+          <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">${name}</td>
+          <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">${title}</td>
+          <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap overflow-hidden w-[300px]"> <p class="w-[300px] wh text-center">${body}</p></td>
+          <td class="text-base font-medium text-gray-900 px-6 py-4 text-center whitespace-nowrap">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 edit-btn rounded-full"><a href="#">Edit</a></button>
+            <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full delete-btn"><a href="#">Delete</a></button>
+          </td>
+        `;
+        tableBody.appendChild(newRow);
+        addDeleteButtonListener(newRow);
+      }
+      document.getElementById('doneBtn').addEventListener('click', function () {
+        const input1Value = document.querySelector('#myModal input:nth-of-type(1)').value;
+        const input2Value = document.querySelector('#myModal input:nth-of-type(2)').value;
+        const input3Value = document.querySelector('#myModal input:nth-of-type(3)').value;
+        const input4Value = document.querySelector('#myModal input:nth-of-type(4)').value;
+        addRow(input1Value, input2Value, input3Value, input4Value);
+        document.getElementById('myModal').style.display = "none";
+      });
+
+      // Function to open sidebar
       const sidebar = document.getElementById('sidebar');
       const openSidebarButton = document.getElementById('open-sidebar');
-
       openSidebarButton.addEventListener('click', (e) => {
         e.stopPropagation();
         sidebar.classList.toggle('-translate-x-full');
       });
 
-      // Close the sidebar when clicking outside of it
+      // Function to close sidebar when clicking outside of it
       document.addEventListener('click', (e) => {
         if (!sidebar.contains(e.target) && !openSidebarButton.contains(e.target)) {
           sidebar.classList.add('-translate-x-full');
         }
       });
+
+      // Function to open modal
+      document.getElementById('open-modal').addEventListener('click', function () {
+        document.getElementById('myModal').style.display = "block";
+      });
+
+      // Function to close modal
+      document.getElementById('x').addEventListener('click', function () {
+        document.getElementById('myModal').style.display = "none";
+      });
+
+      document.getElementById('closeBtn').addEventListener('click', function () {
+        document.getElementById('myModal').style.display = "none";
+      });
+
+
     </script>
 
   </div>
   </script>
 </body>
-
-
 
 </html>
